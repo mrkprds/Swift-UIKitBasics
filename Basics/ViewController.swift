@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var someLabel: UILabel!
     @IBOutlet weak var someTextField: UITextField!
     let label = UILabel()
+    @IBOutlet weak var lastNameField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,35 +22,48 @@ class ViewController: UIViewController {
         label.frame = CGRect(x: 100, y: 100, width: 200, height: 100)
         label.text = "Hello World"
         view.addSubview(label)
-        
-        someLabel.text = "I've now changed the label"
-        
+
         someTextField.becomeFirstResponder()
+        someTextField.delegate = self
+        
+        lastNameField.placeholder = "Enter Last Name"
     }
 
     @IBAction func someButton(_ sender: Any) {
-        
-        guard let someTextFieldValue = someTextField.text, !someTextFieldValue.isEmpty else{
-            let ac = UIAlertController(
-                title: "Text field is empty",
-                message: "Please enter some text",
-                preferredStyle: .alert)
-            
-            ac.addAction(UIAlertAction(
-                title: "Close",style: .destructive))
-            
-            present(ac, animated: true)
+       submitTextField()
+    }
     
+    func submitTextField(){
+        guard let someTextFieldValue = someTextField.text, !someTextFieldValue.isEmpty else{
+        AlertController.showTextFieldEmptyAlert(
+            on: self,
+            withTitle: "Last name field is empty",
+            message: "Please type something")
             return
         }
-        someLabel.text = someTextFieldValue
-        someTextField.resignFirstResponder()
+        
+        guard let lastNameValue = lastNameField.text, !lastNameValue.isEmpty else {
+            AlertController.showTextFieldEmptyAlert(
+                on: self,
+                withTitle: "Last name field is empty",
+                message: "Please type something")
+                return
+        }
+        
+        someLabel.text = "some TF = \(someTextFieldValue) Last Name = \(lastNameValue)"
+        view.endEditing(true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //closes keyboard
         view.endEditing(true)
     }
+ 
     
+    //do something when return button in keyboard is pressed
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        submitTextField()
+        return false
+    }
 }
 

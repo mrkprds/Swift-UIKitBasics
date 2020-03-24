@@ -13,6 +13,7 @@
 		91059A43242A66370033E51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91059A41242A66370033E51A /* Main.storyboard */; };
 		91059A45242A663B0033E51A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91059A44242A663B0033E51A /* Assets.xcassets */; };
 		91059A48242A663B0033E51A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91059A46242A663B0033E51A /* LaunchScreen.storyboard */; };
+		91059A58242A80B30033E51A /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91059A57242A80B30033E51A /* AlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		91059A44242A663B0033E51A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91059A47242A663B0033E51A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91059A49242A663B0033E51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91059A57242A80B30033E51A /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				91059A3B242A66370033E51A /* AppDelegate.swift */,
 				91059A3D242A66370033E51A /* SceneDelegate.swift */,
 				91059A3F242A66370033E51A /* ViewController.swift */,
+				91059A57242A80B30033E51A /* AlertController.swift */,
 				91059A41242A66370033E51A /* Main.storyboard */,
 				91059A44242A663B0033E51A /* Assets.xcassets */,
 				91059A46242A663B0033E51A /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91059A40242A66370033E51A /* ViewController.swift in Sources */,
+				91059A58242A80B30033E51A /* AlertController.swift in Sources */,
 				91059A3C242A66370033E51A /* AppDelegate.swift in Sources */,
 				91059A3E242A66370033E51A /* SceneDelegate.swift in Sources */,
 			);
