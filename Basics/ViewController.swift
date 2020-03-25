@@ -16,12 +16,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
         
-        
-        label.frame = CGRect(x: 100, y: 100, width: 200, height: 100)
-        label.text = "Hello World"
-        view.addSubview(label)
+//        label.frame = CGRect(x: 100, y: 100, width: 200, height: 100)
+//        label.text = "Hello World"
+//        view.addSubview(label)
 
         someTextField.becomeFirstResponder()
         someTextField.delegate = self
@@ -37,7 +36,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         guard let someTextFieldValue = someTextField.text, !someTextFieldValue.isEmpty else{
         AlertController.showTextFieldEmptyAlert(
             on: self,
-            withTitle: "Last name field is empty",
+            withTitle: "Text field is empty",
             message: "Please type something")
             return
         }
@@ -65,5 +64,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         submitTextField()
         return false
     }
+    
+    @IBAction func showView(_ sender: Any) {
+        let vc = (storyboard?.instantiateViewController(identifier: "HardCode") as? HardCodeViewController)!
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
