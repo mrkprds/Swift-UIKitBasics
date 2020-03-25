@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ofv-lo-uD7">
-    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,77 +12,60 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Basics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wai-BD-x6K">
-                                <rect key="frame" x="16" y="67" width="635" height="60"/>
+                                <rect key="frame" x="16" y="79" width="343" height="60"/>
                                 <viewLayoutGuide key="safeArea" id="mCy-5H-ike"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter some text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nqv-Z7-NPS">
-                                <rect key="frame" x="16" y="140" width="635" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nqv-Z7-NPS">
+                                <rect key="frame" x="16" y="152" width="343" height="34"/>
                                 <viewLayoutGuide key="safeArea" id="NFh-gl-xyR"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUP-MR-blU">
-                                <rect key="frame" x="16" y="184" width="635" height="34"/>
-                                <viewLayoutGuide key="safeArea" id="v2I-Wg-lrS"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter some text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sy5-Sr-Bkd">
-                                <rect key="frame" x="16" y="234" width="635" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-MT-8xc">
+                                <rect key="frame" x="225" y="261" width="134" height="30"/>
+                                <state key="normal" title="Show Another VIew"/>
+                                <connections>
+                                    <action selector="showView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xED-da-fnc"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter last name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sy5-Sr-Bkd">
+                                <rect key="frame" x="16" y="201" width="343" height="34"/>
                                 <viewLayoutGuide key="safeArea" id="e5s-JS-G5x"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZxT-Pk-UCG">
-                                <rect key="frame" x="16" y="278" width="635" height="34"/>
-                                <viewLayoutGuide key="safeArea" id="X3G-zM-0BL"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6O5-ZS-qIm">
-                                <rect key="frame" x="451" y="337" width="46" height="30"/>
+                                <rect key="frame" x="164" y="261" width="46" height="30"/>
                                 <viewLayoutGuide key="safeArea" id="U3i-3M-Cg9"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="someButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="moz-Ds-gp2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-MT-8xc">
-                                <rect key="frame" x="517" y="337" width="134" height="30"/>
-                                <state key="normal" title="Show Another VIew"/>
-                                <connections>
-                                    <action selector="showView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xED-da-fnc"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ieo-MT-8xc" firstAttribute="leading" secondItem="6O5-ZS-qIm" secondAttribute="trailing" constant="20" id="1JJ-ic-t6s"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nqv-Z7-NPS" secondAttribute="trailing" constant="16" id="4A9-2s-Xvq"/>
-                            <constraint firstItem="Sy5-Sr-Bkd" firstAttribute="top" secondItem="IUP-MR-blU" secondAttribute="bottom" constant="16" id="7as-lF-5EY"/>
-                            <constraint firstItem="Sy5-Sr-Bkd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="AXw-td-kqj"/>
-                            <constraint firstItem="nqv-Z7-NPS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="E5w-No-oV3"/>
-                            <constraint firstItem="ZxT-Pk-UCG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OPB-eq-Yty"/>
-                            <constraint firstItem="ZxT-Pk-UCG" firstAttribute="top" secondItem="Sy5-Sr-Bkd" secondAttribute="bottom" constant="10" id="X0i-NE-F4T"/>
-                            <constraint firstItem="6O5-ZS-qIm" firstAttribute="top" secondItem="ZxT-Pk-UCG" secondAttribute="bottom" constant="25" id="XN9-Af-uaz"/>
-                            <constraint firstItem="nqv-Z7-NPS" firstAttribute="top" secondItem="Wai-BD-x6K" secondAttribute="bottom" constant="13" id="gJV-fA-tJi"/>
-                            <constraint firstItem="IUP-MR-blU" firstAttribute="top" secondItem="nqv-Z7-NPS" secondAttribute="bottom" constant="10" id="hwo-lT-5Fx"/>
-                            <constraint firstItem="IUP-MR-blU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="i8A-cM-H1m"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wai-BD-x6K" secondAttribute="trailing" constant="16" id="ihm-JS-7De"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZxT-Pk-UCG" secondAttribute="trailing" constant="16" id="jqc-cp-CVC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IUP-MR-blU" secondAttribute="trailing" constant="16" id="mIy-z3-GDK"/>
-                            <constraint firstItem="Wai-BD-x6K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tbY-RH-BMc"/>
-                            <constraint firstItem="ieo-MT-8xc" firstAttribute="top" secondItem="ZxT-Pk-UCG" secondAttribute="bottom" constant="25" id="ulJ-uj-osT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ieo-MT-8xc" secondAttribute="trailing" constant="16" id="wk8-VZ-j8D"/>
-                            <constraint firstItem="Wai-BD-x6K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="yRY-ik-xgB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sy5-Sr-Bkd" secondAttribute="trailing" constant="16" id="yRv-zr-Z97"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ieo-MT-8xc" secondAttribute="trailing" constant="16" id="04Y-NN-Lwt"/>
+                            <constraint firstItem="Wai-BD-x6K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="34e-HO-hkF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wai-BD-x6K" secondAttribute="trailing" constant="16" id="5BO-Bv-maq"/>
+                            <constraint firstItem="ieo-MT-8xc" firstAttribute="top" secondItem="Sy5-Sr-Bkd" secondAttribute="bottom" constant="26" id="8s8-bz-t1h"/>
+                            <constraint firstItem="ieo-MT-8xc" firstAttribute="leading" secondItem="6O5-ZS-qIm" secondAttribute="trailing" constant="15" id="ALO-G0-niX"/>
+                            <constraint firstItem="6O5-ZS-qIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="HIk-XT-jHu"/>
+                            <constraint firstItem="6O5-ZS-qIm" firstAttribute="top" secondItem="Sy5-Sr-Bkd" secondAttribute="bottom" constant="26" id="PVn-B8-AXp"/>
+                            <constraint firstItem="Wai-BD-x6K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="QXo-Y6-Yrf"/>
+                            <constraint firstItem="Sy5-Sr-Bkd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="f0T-IW-ciz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sy5-Sr-Bkd" secondAttribute="trailing" constant="16" id="fik-bh-Dxs"/>
+                            <constraint firstItem="nqv-Z7-NPS" firstAttribute="top" secondItem="Wai-BD-x6K" secondAttribute="bottom" constant="13" id="hUF-OU-rnc"/>
+                            <constraint firstItem="Sy5-Sr-Bkd" firstAttribute="top" secondItem="nqv-Z7-NPS" secondAttribute="bottom" constant="15" id="oqv-DY-qgY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nqv-Z7-NPS" secondAttribute="trailing" constant="16" id="ptC-Rw-gXD"/>
+                            <constraint firstItem="nqv-Z7-NPS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="skf-Gb-qzW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="heightClass=compact-widthClass=compact">
@@ -91,9 +74,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Vds-Ko-vON"/>
                     <connections>
-                        <outlet property="lastNameField" destination="IUP-MR-blU" id="Ukf-Mq-F2C"/>
-                        <outlet property="someLabel" destination="Wai-BD-x6K" id="YT4-Mf-aYu"/>
-                        <outlet property="someTextField" destination="nqv-Z7-NPS" id="fIJ-ne-zGN"/>
+                        <outlet property="lastNameField" destination="Sy5-Sr-Bkd" id="FiR-GW-xRY"/>
+                        <outlet property="someLabel" destination="Wai-BD-x6K" id="4b7-GY-hFm"/>
+                        <outlet property="someTextField" destination="nqv-Z7-NPS" id="q12-HN-ph7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,7 +88,7 @@
             <objects>
                 <viewController storyboardIdentifier="HardCode" id="d2z-ab-aR7" customClass="HardCodeViewController" customModule="Basics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Hf-Ee-AfG">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Us-9X-Wpx">
@@ -130,7 +113,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ofv-lo-uD7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UWv-3I-aoe">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

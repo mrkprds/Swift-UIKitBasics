@@ -5,26 +5,30 @@
 //  Created by Mark Patrick Perdon on 3/25/20.
 //  Copyright © 2020 Mark Patrick Perdon. All rights reserved.
 //
-
+//lastNameField
+//someTextField
+//someLabel
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var someLabel: UILabel!
     @IBOutlet weak var someTextField: UITextField!
-    let label = UILabel()
     @IBOutlet weak var lastNameField: UITextField!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
+  
         
+//adding label prgramatically
 //        label.frame = CGRect(x: 100, y: 100, width: 200, height: 100)
 //        label.text = "Hello World"
 //        view.addSubview(label)
 
-        someTextField.becomeFirstResponder()
-        someTextField.delegate = self
         
+        //someTextField.becomeFirstResponder() //makes keyboard pop up on start 
+        someTextField.delegate = self
+        someTextField.placeholder = "Enter Some Text"
         lastNameField.placeholder = "Enter Last Name"
     }
 
@@ -50,6 +54,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         someLabel.text = "some TF = \(someTextFieldValue) Last Name = \(lastNameValue)"
+        someLabel.font = UIFont(name: "System Regular", size: 10.0)
         view.endEditing(true)
     }
     
@@ -67,7 +72,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func showView(_ sender: Any) {
         let vc = (storyboard?.instantiateViewController(identifier: "HardCode") as? HardCodeViewController)!
-        
         navigationController?.pushViewController(vc, animated: true)
     }
     
